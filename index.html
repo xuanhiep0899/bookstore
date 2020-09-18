@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Book store</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="header.css">
+	<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js?sensor=false&language=vi"></script>
+</head>
+<body id="body" class="bg-light containerr" style="background: linear-gradient(#6090b3,#e1f5fb)">
+	<header class="shadow-sm mb-1 mb-lg-5 bg-white rounded sticky" id="body">
+		<div class="menu-header menu-header-font bg-dark d-none d-lg-block">
+			<div class="container">
+				<div class="row p-0">
+					<div class="col-6"></div>
+					<div class="col-12 col-lg-6 p-0">	
+						<nav class="navbar navbar-expand-lg navbar-light p-0">
+						  <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						    <span class="navbar-toggler-icon color-white"></span>
+						  </button>
+						  <div class="collapse navbar-collapse 	justify-content-end" id="navbarSupportedContent">
+						    <ul class="navbar-nav mt-3 mt-lg-0">
+						      <li class="nav-item active mr-2">
+						        <a class="nav-link text-white" href="#"><i class="fas fa-heart mr-2"></i>Wishlist <span class="sr-only">(current)</span></a>
+						      </li>
+						      <li class="nav-item mr-2">
+						        <a class="nav-link text-white" href="#"><i class="fas fa-compass mr-2"></i>Compare</a>
+						      </li>
+						      <li class="nav-item mr-2">
+						        <a class="nav-link text-white" href="#">
+						          <i class="fas fa-user-circle mr-2"></i>My account
+						        </a>
+						      </li>
+						      <li class="nav-item mr-2">
+						        <span style="cursor: pointer;" class="nav-link text-white"  ><i class="fas fa-sign-in-alt mr-2"></i>Login</span>
+						      </li>
+						    </ul>
+						    
+						    <form class="form-inline my-2 my-lg-0 d-block d-lg-none">
+						      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>	
+						    </form>
+						  </div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-content mt-0 pt-2 st">
+			<div class="container">
+				<div class="brach-content position-relative form-responsive mb-2 mb-lg-5">
+					<div class="row">
+						<div class="col-lg-4 d-none d-lg-block"></div>
+						<div class="col-6 col-lg-4 d-flex justify-content-center pr-2">
+							<img height="55" src="./design/brach.png" alt="">
+						</div>
+						<div class="col-4 d-lg-flex justify-content-end align-items-center d-none d-lg-block">
+							<form class="form-inline my-2 my-lg-0 d-none d-lg-block form-search">
+						      <input class="rounded-pill form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						      <button class="btn btn-outline-success rounded-pill my-0 my-sm-0" type="submit">Search</button>
+						    </form>
+						</div>
+						<div class="col-12 d-block d-lg-none position-absolute" style="left: 0">
+							<nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-end">
+							  <button class="navbar-toggler bg-light click-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							    <i class="fas fa-bars" id="button"></i>
+							  </button>
+							  <div class="collapse navbar-collapse 	justify-content-center menu-hidden" id="navbarSupportedContent">
+							    <ul class="navbar-nav mt-3 mt-lg-0">
+							      <li class="nav-item">
+							        <a class="nav-link text-uppercase" href="index.html"><i class="fas fa-home mr-2"></i> home <span class="sr-only">(current)</span></a>
+							      </li>
+							      <li class="nav-item">
+							        <a class="nav-link text-uppercase" href="#"><i class="fas fa-users mr-2"></i>about us</a>
+							      </li>
+							      <li class="nav-item">
+							        <a class="nav-link text-uppercase" href="#"><i class="fas fa-blog mr-2"></i>blog</a>
+							      </li>
+							      <li class="nav-item">
+							        <a class="nav-link text-uppercase" href="#"><i class="fas fa-id-card-alt mr-2"></i>contac</a>
+							      </li>
+							      <li class="nav-item">
+							      	<a class="nav-link text-uppercase" href="file:///C:/Users/Laptop88/Desktop/Web-book/login.html"><i class="fas fa-sign-in-alt mr-2"></i>login</a>
+							      </li>
+							    </ul>
+							    <form class="form-inline my-2 my-lg-0 d-block d-lg-none">
+							      <input id="search-form" class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+							      <button style="width: 70px !important;" id="search-buttom" class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+							    </form>
+							  </div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="common-sticky shadow" id="menu-fixed">
+				<div class="container d-none d-md-block ">
+					<div class="row">
+						<div class="col-4 col-lg-4 d-flex justify-content-start pr-2">
+							<img height="55" src="./design/brach.png" alt="">
+						</div>
+						<div class="col-8 d-flex justify-content-end align-items-center">
+							  <li class="d-inline nav-item position-relative mr-3 active">
+							    <a class="nav-link text-uppercase text-bold pb-1 align-middle" href="index.html">home<i class="ml-2 fas fa-sort-down"></i></a>
+							    <div class="list-group sub-menu">
+								  <a href="#" class="list-group-item list-group-item-action">
+								    Cras justo odio
+								  </a>
+								  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+								  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+								  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+								  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+								</div>
+							  </li>
+							  <li class="d-inline nav-item position-relative mr-3">
+							    <a class="nav-link text-uppercase pb-1 bottom-out align-middle" href="#">about us <i class="ml-2 fas fa-sort-down"></i></a>
+							    <div class="list-group sub-menu">
+								  <a href="#" class="list-group-item list-group-item-action">
+								    Cras justo odio
+								  </a>
+								  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+								  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+								  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+								  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+								</div>
+							  </li> 
+							  <li class="d-inline nav-item position-relative mr-3">
+							    <a class="nav-link text-uppercase pb-1 bottom-out" href="#">blog</a>
+							  </li>
+							  <li class="d-inline nav-item position-relative">
+							    <a class="nav-link text-uppercase pb-1 bottom-out" href="#">contact</a>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-content d-none d-lg-block mt-3 shadow">
+				<div class="container">
+					<div class="row">
+						<div class="col-6">
+							<ul class="nav">
+							  <li class="nav-item position-relative mr-3 active pb-1">
+							    <a class="nav-link text-uppercase text-bold pb-2 bottom-out" href="index.html">home</a>
+							  </li>
+							  <li class="nav-item position-relative mr-3">
+							    <a class="nav-link text-uppercase pb-1 bottom-out" href="#">about us</a>
+							  </li> 
+							  <li class="nav-item position-relative mr-3">
+							    <a class="nav-link text-uppercase pb-1 bottom-out" href="#">blog</a>
+							  </li>
+							  <li class="nav-item position-relative">
+							    <a class="nav-link text-uppercase pb-1 bottom-out" href="contact.html">contact</a>
+							  </li>
+							</ul>
+						</div>
+						<div class="col-6 d-flex justify-content-end">
+							<ul class="nav">
+								<li class="nav-item mr-2 position-relative">
+									<a class="nav-link text-uppercase pb-1" href="my-notification.html"><i class="bell-cart fas fa-bell mr-2"></i>notification</a>
+								</li>
+								<li class="nav-item position-relative">
+									<a class="nav-link pb-1" href="cart.html"><i class="bell-cart fas fa-shopping-cart"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="banner mt-0 mt-md-2">
+		<div  id="background"></div>
+		<div class="container shadow pb-3 mb-3 mb-lg-3 bg-white rounded pt-3">
+			<div class="row">
+				<div class="col-12 col-lg-8 slider ">
+					<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+					  <ol class="carousel-indicators">
+					    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+					    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+					  </ol>
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img height="450" src="./design/book-slider.jpg" class="d-block w-100" alt="...">
+					      <!-- <div class="carousel-caption d-none d-md-block">
+					        <h5>Chương trình khuyến mãi đặc biệt</h5>
+					        <p>Giảm giá sách.</p>
+					      </div> -->
+					    </div>
+					    <div class="carousel-item">
+					      <img height="450" src="./design/slide.jpg" class="d-block w-100" alt="...">
+					      <!-- <div class="carousel-caption d-none d-md-block">
+					        <h5>Third slide label</h5>
+					        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					      </div> -->
+					    </div>
+					    <div class="carousel-item">
+					      <img height="450" src="./design/TLOJHBANNER.jpg" class="d-block w-100" alt="...">
+					      <div class="carousel-caption d-none d-md-block">
+					    </div>
+					  </div>
+					  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 d-none d-lg-block right">
+				<h5 class="text-center text-uppercase mt-1 text-decoration mb-3"><u>top seller</u></h5>
+				<div class="content-right border scrollbar" id="style-1">
+					<ul class="list-group list-group-flush">
+					  <li class="list-group-item">
+						<div class="row">
+							<div class="col-1 d-flex align-items-center justify-content-center p-0">
+								<div class="count border rounded-circle text-center" style="background: #f70000b3">
+									<span class="text-white">1</span>
+								</div>
+							</div>
+							<div class="col-4 pr-0">
+								<img width="65" src="./design/book4.jpg" alt="">
+							</div>
+							<div class="col-7 p-0 text-center">
+								<span class="ml-2">tôi nói gì khi nói về chạy bộ</span>
+								<div class="star-ratting d-flex align-items-center justify-content-center">					
+									<ul class="d-flex text-center">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="row d-flex justify-content-center align-items-center">
+									<div class="col-3"></div>
+									<div class="col-2 border p-1 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-3"></div>
+								</div>
+								<div class="price text-center">
+									<span>62.000</span>
+									<span>49.600</span>
+								</div>
+							</div>
+						</div>
+					  </li>
+					  <li class="list-group-item py-2">
+					  	<div class="row">
+							<div class="col-1 d-flex align-items-center justify-content-center p-0">
+								<div class="count border rounded-circle text-center"style="background: #f75000b3">
+									<span class="text-white">2</span>
+								</div>
+							</div>
+							<div class="col-4 pr-0">
+								<img width="65" src="./design/book3.jpg" alt="">
+							</div>
+							<div class="col-7 p-0 text-center">
+								<span class="ml-2">tuổi trẻ đáng giá bao nhiêu</span>
+								<div class="star-ratting d-flex align-items-center justify-content-center">					
+									<ul class="d-flex text-center">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="row d-flex justify-content-center align-items-center">
+									<div class="col-3"></div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-3"></div>
+								</div>
+								<div class="price text-center">
+									<span>62.000</span>
+									<span>49.600</span>
+								</div>
+							</div>
+						</div>
+					  </li>
+					  <li class="list-group-item py-2">
+					  	<div class="row">
+							<div class="col-1 d-flex align-items-center justify-content-center p-0">
+								<div class="count border rounded-circle text-center"style="background: #f79400b3">
+									<span class="text-white">3</span>
+								</div>
+							</div>
+							<div class="col-4 pr-0">
+								<img width="65" src="./design/book2.jpg" alt="">
+							</div>
+							<div class="col-7 p-0 text-center">
+								<span class="ml-2">chiến binh cầu vồng</span>
+								<div class="star-ratting d-flex align-items-center justify-content-center">					
+									<ul class="d-flex text-center">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="row d-flex justify-content-center align-items-center">
+									<div class="col-3"></div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-3"></div>
+								</div>
+								<div class="price text-center">
+									<span>62.000</span>
+									<span>49.600</span>
+								</div>
+							</div>
+						</div>
+					  </li>
+					  <li class="list-group-item py-3">
+					  	<div class="row">
+							<div class="col-1 d-flex align-items-center justify-content-center p-0">
+								<div class="count border rounded-circle text-center" style="background: #f7ef00b3">
+									<span class="text-white">4</span>
+								</div>
+							</div>
+							<div class="col-4 pr-0">
+								<img width="65" src="./design/book1.jpg" alt="">
+							</div>
+							<div class="col-7 p-0 text-center">
+								<span class="ml-2">lời hứa về một cây bút chì</span>
+								<div class="star-ratting d-flex align-items-center justify-content-center">					
+									<ul class="d-flex text-center">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="row d-flex justify-content-center align-items-center">
+									<div class="col-3"></div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-1 text-center">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-3"></div>
+								</div>
+								<div class="price text-center">
+									<span>62.000</span>
+									<span>49.600</span>
+								</div>
+							</div>
+						</div>
+					  </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-content my-0 mt-0 my-lg-1 mt-lg-1 mt-lg-3">
+		<div class="container shadow-sm py-3 mb-5 bg-white rounded shadow">
+			<div class="Category-book py-3">
+				<div class="row">
+					<div class="col-12 col-md-3">
+						<div class="book-cate1 book-cate">
+							<img width="100%" src="./design/slide_1.png" alt="">
+						</div>
+					</div>
+					<div class="col-12 col-md-9 mt-3 mt-md-0">
+						<div class="row">
+							<div class="col-7">
+								<div class="book-cate2 book-cate">
+									<img width="100%" src="./design/slide_2.png" alt="">
+								</div>
+							</div>
+							<div class="col-5">
+								<div class="book-cate3 book-cate">
+									<img width="100%" src="./design/slide_4.png" alt="">
+								</div>
+							</div>	
+						</div>
+						<div class="row mt-4">
+							<div class="col-5">
+								<div class="book-cate4 book-cate">
+									<img width="100%" src="./design/slide_3.jpg" alt="">
+								</div>
+							</div>
+							<div class="col-7">
+								<div class="book-cate5 book-cate">
+									<img width="100%" src="./design/slide_5.png" alt="">
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-menu border">
+				<ul class="nav">
+				  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Thể loại
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">Tiểu thuyết</a>
+			          <a class="dropdown-item" href="#">truyện tranh</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">Kỹ năng</a>
+			          <a class="dropdown-item" href="#">Ngoại ngữ</a>
+			          <a class="dropdown-item" href="#">Giáo trình</a>
+			        </div>
+			      </li>
+				  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Đánh giá
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">Chất lượng</a>
+			          <a class="dropdown-item" href="#">Nội dung</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">Dịch vụ</a>
+			        </div>
+			      </li>
+				  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Sắp xếp
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">dưới 50k</a>
+			          <a class="dropdown-item" href="#">trên 50k</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">sách bộ</a>
+			        </div>
+			      </li>
+				</ul>
+			</div>
+			<div class="control-bar shadow-sm border pl-3 pr-5 py-1">
+				<div class="row">
+					<div class="col-10 col-md-11">
+						<span class="text-uppercase">sách mới</span>
+					</div>
+					<div class="col-2 col-md-1 d-flex justify-content-end align-items-center">
+					  <a class="carousel-control-prev" href="#carouselExampleCaption" role="button" data-slide="prev">
+					    <i class="fas fa-arrow-circle-left"></i>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleCaption" role="button" data-slide="next">
+					    <i class="fas fa-arrow-circle-right"></i>
+					  </a>
+					</div>
+				</div>
+			</div>
+			<div class="new-product border px-3 bg-light pt-md-3">
+				<div id="carouselExampleCaption" class="carousel slide pl-3" >
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleCaption" data-slide-to="0"></li>
+				    <li data-target="#carouselExampleCaption" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleCaption" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <div class="row mt-2 mt-lg-5">
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center position-relative">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center mb-md-4">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-12 col-md-6 col-lg-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      </div>				  
+				    </div>
+				    <div class="carousel-item">
+				      <div class="row mt-2 mt-lg-5">
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center mb-md-4">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-12 col-md-6 col-lg-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      </div>				  
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="banner-product my-2 position-relative justify-content-center align-items-item mt-5 mb-5">
+				<div class="back-blur"></div>
+				<h3 class="text-content">See more books</h3>
+				<img src="./design/final_banner_3.png" alt="">
+			</div>
+			<div class="control-bar shadow-sm border pl-3 pr-5 py-1">
+				<div class="row">
+					<div class="col-10 col-md-11">
+						<span class="text-uppercase">Bán chạy nhất</span>
+					</div>
+					<div class="col-2 col-md-1 d-flex justify-content-end align-items-center">
+					  <a class="carousel-control-prev" href="#carouselExampleCaption1" role="button" data-slide="prev">
+					    <i class="fas fa-arrow-circle-left"></i>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleCaption1" role="button" data-slide="next">
+					    <i class="fas fa-arrow-circle-right"></i>
+					  </a>
+					</div>
+				</div>
+			</div>
+			<div class="new-product border px-3 bg-light">
+				<div id="carouselExampleCaption1" class="carousel slide pl-3" >
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleCaption1" data-slide-to="0"></li>
+				    <li data-target="#carouselExampleCaption1" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleCaption1" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <div class="row mt-2 mt-lg-5">
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center position-relative">
+				      		<div class="card text-center align-items-center pt-4 " style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center mb-md-4">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-12 col-md-6 col-lg-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      </div>				  
+				    </div>
+				    <div class="carousel-item">
+				      <div class="row mt-2 mt-lg-5">
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="mb-3 mb-lg-0 col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-md-block col-12 col-md-6 col-lg-3 text-center align-items-center mb-md-4">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-12 col-md-6 col-lg-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book4.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tôi nói gì khi nói về chạy bộ</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book3.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Tuổi trẻ đáng giá bao nhiêu</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book2.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Chiến binh cầu vồng</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      	<div class="d-none d-lg-block col-3 text-center align-items-center my-5">
+				      		<div class="card text-center align-items-center pt-4" style="width: 100%;">
+							  <img width="130" height="200" src="./design/book1.jpg" alt="">
+							  <div class="card-body pt-1">
+							    <p class="mt-2">Lời hứa về một cây bút chì</p>
+							    <div class="star-ratting mx-auto">					
+									<ul class="d-flex text-center justify-content-center px-5">
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+										<li class="d-inline"><a href="#"><i class="fas fa-star"></i></a></li>
+									</ul>
+								</div>
+								<div class="price">
+									<span>62.000</span>
+									<span>49.600</span>
+							    </div>
+							    <div class="row mt-3 position-absolute icon-relative">
+									<div class="col-2"></div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-plus"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-eye"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="far fa-heart"></i></a>
+									</div>
+									<div class="col-2 border p-2 text-center icon">
+										<a href="#"><i class="fas fa-random"></i></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							  </div>
+							</div>
+				      	</div>
+				      </div>				  
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="services-list mt-5">
+				<div class="container">
+					<div class="row">
+	                    <div class="col-xl-3 col-md-6 mt--30 border d-flex justify-content-center pt-3">
+	                        <div class="feature-box h-100 d-flex">
+	                            <div class="icon">
+	                                <i class="fas fa-shipping-fast mt-2"></i>
+	                            </div>
+	                            <div class="text text-left ml-3">
+	                                <h5>Free Shipping Item</h5>
+	                                <p> Orders over $500</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-xl-3 col-md-6 mt--30 border d-flex justify-content-center pt-3">
+	                        <div class="feature-box h-100 d-flex">
+	                            <div class="icon">
+	                                <i class="fas fa-redo-alt mt-2"></i>
+	                            </div>
+	                            <div class="text text-left ml-3">
+	                                <h5>Money Back Guarantee</h5>
+	                                <p>100% money back</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-xl-3 col-md-6 mt--30 border d-flex justify-content-center pt-3">
+	                        <div class="feature-box h-100 d-flex">
+	                            <div class="icon">
+	                                <i class="fas fa-piggy-bank mt-2"></i>
+	                            </div>
+	                            <div class="text text-left ml-3">
+	                                <h5>Cash On Delivery</h5>
+	                                <p>Lorem ipsum dolor amet</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-xl-3 col-md-6 mt--30 border d-flex justify-content-center pt-3">
+	                        <div class="feature-box h-100 d-flex">
+	                            <div class="icon">
+	                                <i class="fas fa-life-ring mt-2"></i>
+	                            </div>
+	                            <div class="text text-left ml-3">
+	                                <h5>Help &amp; Support</h5>
+	                                <p>Call us : + 0123.4567.89</p>
+	                            </div>
+	                        </div>
+	                    </div>
+                	</div>
+				</div>
+			</div>
+			<div class="sale-banner mt-5">
+				<div class="container">
+					<div class="row space-db--30">
+                    <div class="col-12 col-lg-6 col-md-6 mb--30 p-0 pr-0 pr-md-2">
+                        <a href="" class="promo-image promo-overlay">
+                            <img width="100%" src="./design/sale1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6 mb--30 p-0 pl-0 mt-2 mt-md-0 pl-md-2">
+                        <a href="" class="promo-image promo-overlay">
+                            <img width="100%" src="./design/sale.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="promo-wrapper promo-type-three">
+            <a href="#" class="promo-image promo-overlay bg-image" data-bg="image/bg-images/promo-banner-full.jpg" style="background-image: url('./design/promo-banner-full.jpg');">
+            </a>
+        </div> -->
+	</div>
+	<div class="contact-us mt-5">
+		<div class="form-adress position-relative">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6265.738959611999!2d105.79420632516643!3d20.96734170135111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e96a9bc6d772d78!2zU2nDqnUgdGjhu4sgxJBp4buHbiBtw6F5IFhBTkg!5e0!3m2!1svi!2s!4v1597392000576!5m2!1svi!2s" width="100%" height="500" frameborder="0" style="border:3px solid #ccc;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<form class="shadow-lg border" style="width: 500px; height: 400px; position: absolute; top: 55%; left: 54%; background: #fff; padding: 20px 10px 10px 10px">
+			  <div class="form-group">
+			    <label for="exampleFormControlInput1">Email address</label>
+				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlTextarea1">Textarea</label>
+			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			  </div>
+			  <div class="form-group form-check">
+			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+			    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+			  </div>
+			  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+			</form>
+		</div>
+		<div class="container mb-5">
+			<div class="row mt-4 list-appear">
+				<div class="col-3">
+					<ul>
+						<li><img src="./design/brach.png" alt=""></li>
+						<li class="mt-4">
+							<span class="font-weight-bold ">Adress: </span><span>
+							156 Tan Trieu, Thanh Tri, Hanoi</span>
+						</li>
+						<li class="mt-4">
+							<span class="font-weight-bold ">Phone: </span><span>+8462195530</span><br>
+						</li>
+						<li class="mt-4">
+							<span class="font-weight-bold ">Email: </span><span>xuanhiepdt1@gmail.com</span>
+						</li>
+					</ul>	
+				</div>
+				<div class="col-3 list-appear">
+					<ul>
+						<li class="mt-4"><a href="#">
+							<h4>information</h4>
+						</a></li>
+						<li class="mt-5"><a href="#">Prices drop</a></li>
+						<li class="mt-2"><a href="#">New products</a></li>
+						<li class="mt-2"><a href="#">Best sales</a></li>
+						<li class="mt-2"><a href="#">Contact us</a></li>
+						<li class="mt-2"><a href="#">Sitemap</a></li>
+					</ul>
+				</div>
+				<div class="col-3"></div>
+			</div>
+		</div>
+		<div class="social-media py-4 mt-3">
+			<div class="follow-us d-flex justify-content-center my-3">
+				<h5>Follow us</h5>
+			</div>
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-4 d-flex justify-content-center align-items-center">
+					<div class="icon col-2 d-flex justify-content-center align-items-center">
+						<a href="#"><i class="fab fa-facebook py-3"></i></a>
+					</div>
+					<div class="youtobe icon col-2 d-flex justify-content-center align-items-center">
+						<a href="#"><i class="fab fa-youtube py-3"></i></a>
+					</div>
+					<div class="icon col-2 d-flex justify-content-center align-items-center">
+						<a href="#"><i class="fab fa-twitter-square py-3"></i></a>
+					</div>
+					<div class="icon col-2 d-flex justify-content-center align-items-center">
+						<a href="#"><i class="fab fa-google-plus py-3"></i></a>
+					</div>
+				</div>
+				<div class="col-4"></div>
+			</div>
+		</div>
+	</div>
+	<div style="height: 300px;" class="footer bg-dark py-5">
+		<div class="container text-center">
+			<p class="text-white">Suspendisse in auctor augue. Cras fermentum est ac fermentum tempor. Etiam vel magna volutpat, posuere eros</p>
+		</div>
+		<div class="way-pay mt-2">
+			<div class="row">
+				<div class="col-4"></div>
+				<div onclick="" class="col-4 d-flex justify-content-center align-items-center mt-4">
+					<img src="./design/payment.png" alt="">
+				</div>
+				<div class="col-4"></div>
+			</div>
+		</div>
+		<div class="content text-center mt-5">
+			<p class="text-white">Copyright © 2020 Bookself. All Right Reserved.</p>
+			<p class="text-white">Design By Xuanhiep</p>
+		</div>
+	</div>
+	<a href="#" class="crunchify-top">↑</a>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</body>
+</html>
